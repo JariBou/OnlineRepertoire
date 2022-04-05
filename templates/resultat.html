@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repertoire</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='pages.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+</head>
+<body>
+<p class="Title">Query Results</p>
+    {% if typ == 'search_num'%}
+        <p>The Holder of the number {{number}} is <a href="http://localhost:5000/person_settings/?name={{name}}">{{name}}</a></p>
+    {% elif typ == 'search_name'%}
+       <p>The Numbers of <a href="http://localhost:5000/person_settings/?name={{name}}">{{name}}</a> are: </p>
+        {% for line in numbers %}
+            <p>- {{ line }}</p>
+        {% endfor %}
+    {% elif typ == 'watch'%}
+        <p>The Numbers of <a href="http://localhost:5000/person_settings/?name={{name}}">{{name}}</a> are: </p>
+        {% for line in numbers %}
+            <p>- {{ line }}</p>
+        {% endfor %}
+    {% elif typ == 'add_new'%}
+        <p>{{add_msg}}</p>
+    {% elif typ == 'add'%}
+        <p>{{add_msg}}</p>
+    {% elif typ == 'error'%}
+        <p>{{error_msg}}</p>
+
+{% elif typ == 'remove'%}
+<p>{{msg}}</p>
+{% endif %}
+<br>
+{% if returnAllowed == True %}
+<p><button class="ReturnButton" onclick="location.href='{{prevUrl}}'">Previous Page</button> </p>
+{% endif %}
+<p><button class="ReturnButton" onclick="location.href='http://localhost:5000/'">Main Page</button> </p>
+</body>
+</html>

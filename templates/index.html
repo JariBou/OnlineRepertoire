@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{url_for('static', filename='menu.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+	<title>Repertoire</title>
+</head>
+<body>
+	<h1 class="Title">Répertoire</h1>
+	<p class="SubTitle">Select an option</p>
+	<br><br><br>
+    <p><button class="MenuButton" onclick="location.href='http://localhost:5000/add_num/?new=yes'">Add Number</button> </p>
+    <p><button class="MenuButton" onclick="location.href='http://localhost:5000/search/?type=name'">Search by Name</button> </p>
+    <p><button class="MenuButton" onclick="location.href='http://localhost:5000/search/?type=num'">Search by Number</button> </p>
+    <p><button class="MenuButton" onclick="location.href='http://localhost:5000/peak'">Peak</button> </p>
+</body>
+</html>

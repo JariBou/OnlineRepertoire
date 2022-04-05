@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repertoire</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='pages.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+</head>
+<body>
+	{% if new == 'yes'%}
+	<p class="Title">Add Person</p>
+	<p class="SubTitle">Enter Name and Number to be added</p>
+	<div>
+		<form action="http://localhost:5000/resultat/?type=add_new" method="post">
+			<p1><label>Name: </label><input type="text" name="nom"/></p1>
+			<p1><label>Number: </label><input type="text" name="num"/></p1>
+			<label></label><input class="ConfirmButton" type="submit" value="Confirm"/>
+		</form>
+</div>
+<br>
+{% elif new == 'no'%}
+	    <p class="Title">Add Number</p>
+		<p class="SubTitle">Enter Number to be added to {{name}}</p>
+
+		<form action="http://localhost:5000/resultat/?type=add&name={{name}}" method="post">
+			<label>Number</label> : <input type="text" name="num"/>
+			<input type="submit" class="ConfirmButton" value="Confirm"/>
+		</form>
+	{% endif %}
+	<br>
+<br>
+<br>
+    <p><button class="ReturnButton" onclick="location.href='http://localhost:5000/'">Main Page</button> </p>
+
+
+</body>
+</html>

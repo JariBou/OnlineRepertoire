@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='menu.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+    <title>PEAK</title>
+</head>
+<body>
+    <p class="Title">PEAK</p>
+    {% for name in names %}
+    <div>
+    <p class="SubTitle"><a href="http://localhost:5000/person_settings/?name={{name}}">{{name}}</a></p>
+        {% for number in name|getNums %}
+        <p style="text-align: center;">- {{number}}</p>
+        {% endfor %}
+        <br></div>
+    {% endfor %}
+    <p><button class="ReturnButton" onclick="location.href='http://localhost:5000/'">Main Page</button> </p>
+</body>
+</html>

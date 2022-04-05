@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repertoire</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='pages.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+</head>
+<body>
+<p class="Title">Search</p>
+<p class="SubTitle">Select or Enter {{searchName}} to be searched for</p>
+    <form action="http://localhost:5000/resultat/?type=search&typo={{searchVar}}" method="post">
+        <input list="selectedData" name="{{searchVar}}">
+        <datalist id="selectedData">
+            {% for line in data %}
+            <option value="{{line}}"></option>
+            {% endfor %}
+        </datalist>
+        <input type="submit" value="Confirm"/>
+    </form>
+    <br>
+        <p><button class="ReturnButton" onclick="location.href='http://localhost:5000/'">Main Page</button> </p>
+</body>
+</html>

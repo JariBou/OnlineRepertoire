@@ -1,0 +1,28 @@
+.Title {
+	color:  darkblue;
+	text-align: center;
+	font-size: 46px;
+}
+
+.SubTitle {
+	color:  blue;
+	text-align: center;
+	font-size: 28px;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:any-link {
+    color: purple;
+}
+
+.ReturnButton {
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
+    cursor:pointer;
+    background-color: red;
+}
+

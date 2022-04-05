@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repertoire</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='pages.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+</head>
+<body>
+    <p class="Title">Remove Numbers</p>
+    <p class="SubTitle">{{name}}</p>
+    <p class="Instruction">Select the numbers to be removed:</p>
+    <form action="http://localhost:5000/resultat/?type=remove_num&name={{name}}" method="post">
+        {% for number in numbers %}
+        <div class="Div"><p1><input type="checkbox" id="{{number}}" name="{{number}}">
+            <label for="{{number}}"> - {{number}}</label></p1>
+        </div> <br>
+        {% endfor %}
+        <br>
+        <input class="ConfirmButton" type="submit" value="Confirmer"/>
+    </form>
+<p><button class="ReturnButton" onclick="location.href='{{prevUrl}}'">Previous Page</button> </p>
+<p><button class="ReturnButton" onclick="location.href='http://localhost:5000/'">Main Page</button> </p>
+
+</body>
+</html>

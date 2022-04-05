@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{url_for('static', filename='menu.css')}}">
+	<link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+	<title>Repertoire</title>
+</head>
+<body>
+	<h1 class="Title">Répertoire</h1>
+	<p class="SubTitle">{{name}}</p>
+	<br><br><br>
+    <p><button class="MenuButton" onclick="location.href='http://localhost:5000/add_num/?new=no&name={{name}}'">Add Number</button> </p>
+	<p><button class="MenuButton" onclick="location.href='http://localhost:5000/resultat/?type=watch&name={{name}}'">See Numbers</button> </p>
+	<p><button class="MenuButton" onclick="location.href='http://localhost:5000/remove_numbers/?name={{name}}'">Remove Number</button> </p>
+	<p><button class="MenuButton" onclick="location.href='http://localhost:5000/resultat/?type=remove&name={{name}}'">Remove person</button> </p>
+	<br>
+    <p><button class="ReturnButton" onclick="location.href='http://localhost:5000/'">Main Menu</button> </p>
+
+</body>
+</html>

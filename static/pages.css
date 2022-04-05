@@ -1,0 +1,60 @@
+p {
+	font-size: 24px;
+	font-family: 'Brush Script MT', cursive;
+	text-align: center;
+}
+
+label{
+    font-size: 20px;
+	font-family: 'Arial';
+}
+
+input {
+}
+
+form  { display: table;
+    margin: auto;
+}
+
+p1 {
+    display: table-row;
+}
+
+.Div {
+    width: auto;
+    border: ridge #ccc;
+    border-width: thick;
+}
+
+label {
+    display: table-cell;
+}
+
+input {
+    font-size: 16px;
+    display: table-cell;
+}
+
+.ConfirmButton {
+    text-align: center;
+    border-radius: 12px;
+}
+
+.NumberButton {
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
+    cursor:pointer;
+    background-color: grey;
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
+}
+
+

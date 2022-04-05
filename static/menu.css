@@ -1,0 +1,14 @@
+p {
+	color: darkred;
+	text-align: center;
+	font-size: 24px;
+	font-family: 'Brush Script MT', cursive;
+}
+
+.MenuButton {
+    font-size: 24px;
+    text-align: center;
+    border-radius: 18px;
+    background-color: turquoise;
+    cursor:pointer;
+}
